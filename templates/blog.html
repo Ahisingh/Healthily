@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      /* Set background image for the page */
+      body {
+            background: url('static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Overlay to make background less distracting */
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Transparent card style with shadow */
+        .blog-card {
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+            border: none;
+            color: white;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .blog-card:hover {
+            transform: translateY(-10px); /* Move up slightly */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Blog Post Image */
+        .blog-card img {
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Author Info */
+        .author-info img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Page title */
+        .page-title {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        /* Responsive card columns */
+        @media (max-width: 768px) {
+            .blog-card {
+                margin-top: 15px;
+            }
+        }
+    </style>
+  </head>
+  <body style="background-image: url('/static/background.jpg'); background-size: cover;">
+
+    <!-- Blog Content -->
+      <h2 class="text-center mb-5">Our Latest Blog Posts</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        <!-- Blog Post 1 -->
+        <div class="col">
+          <div class="card blog-card h-100">
+            <img src="{{ url_for('static', filename='health-tech.jpg') }}" class="card-img-top" alt="Health Tech">
+            <div class="card-body">
+              <h5 class="card-title">How Machine Learning is Revolutionizing Healthcare</h5>
+              <p class="card-text">Discover how machine learning is transforming healthcare, from predictive diagnostics to personalized treatment plans...</p>
+              <div class="d-flex align-items-center author-info">
+                <img src="{{ url_for('static', filename='dr-sarah-brown.jpg') }}" class="rounded-circle me-2" alt="Author">
+                <small>Dr. Sarah Brown • Published on November 1, 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="col">
+          <div class="card blog-card h-100">
+            <img src="{{ url_for('static', filename='symptom-diagnosis.jpg') }}" class="card-img-top" alt="Symptom Diagnosis">
+            <div class="card-body">
+              <h5 class="card-title">The Importance of Symptom-Based Diagnosis in Preventive Healthcare</h5>
+              <p class="card-text">Learn how early diagnosis through symptom-based tools can lead to better health outcomes and prevent diseases...</p>
+              <div class="d-flex align-items-center author-info">
+                <img src="{{ url_for('static', filename='dr-john-doe.jpg') }}" class="rounded-circle me-2" alt="Author">
+                <small>Dr. John Doe • Published on October 20, 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="col">
+          <div class="card blog-card h-100">
+            <img src="{{ url_for('static', filename='data-privacy.jpg') }}" class="card-img-top" alt="Data Privacy">
+            <div class="card-body">
+              <h5 class="card-title">How Data Privacy and Security are Managed in Health Tech</h5>
+              <p class="card-text">Understand the significance of data security in healthcare and the methods used to protect user data in digital health platforms...</p>
+              <div class="d-flex align-items-center author-info">
+                <img src="{{ url_for('static', filename='dr-anne-smith.jpg') }}" class="rounded-circle me-2" alt="Author">
+                <small>Dr. Anne Smith • Published on October 5, 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
+

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background image for the full page */
+        body {
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Hero Section styling with fixed position */
+        .hero-section {
+            position: fixed; /* Fixes the hero section at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for hero */
+            border-radius: 8px;
+            z-index: 9999; /* Ensures it's on top of all content */
+            transition: background 0.3s ease; /* Smooth transition for background */
+        }
+
+        /* Adjust the space below the hero section to prevent overlap */
+        .hero-container {
+            padding-top: 150px; /* This creates space for the fixed hero section */
+        }
+
+        /* Hover Effect for Hero Section: Brighter Text */
+        .hero-section:hover {
+            background: rgba(0, 0, 0, 0.3); /* Slightly lighter background on hover */
+        }
+
+        .hero-section h1, .hero-section p {
+            transition: color 0.3s ease; /* Smooth transition for text color */
+        }
+
+        .hero-section:hover h1,
+        .hero-section:hover p {
+            color: #f5f5f5; /* Brighter text color when hovered */
+        }
+
+        /* Transparent cards with minor opacity */
+        .card {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+            border: none;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Default shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Hover Effect: Scale and enhance shadow */
+        .card:hover {
+            transform: translateY(-10px); /* Lift the card slightly */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+        }
+
+        /* Center and pad main content */
+        .container {
+            padding-top: 20px;
+            padding-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 767px) {
+            .hero-section {
+                padding: 20px; /* Reduce padding on small screens */
+            }
+
+            .card-body {
+                padding: 10px; /* Reduce card padding for mobile */
+            }
+
+            .card {
+                margin-bottom: 15px; /* Add some space between cards */
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('/static/background.jpg'); background-size: cover;">
+
+    <!-- Hero Section (Fixed at the top) -->
+    <div class="container hero-section">
+        <h1>About Us</h1>
+        <p>Welcome to Medical Health Center, where health meets technology for a brighter, healthier future.</p>
+    </div>
+
+    <!-- Main Content with Transparent Cards -->
+    <div class="container my-4 hero-container">
+        <div class="card">
+            <div class="card-body">
+                <h3>Our Vision</h3>
+                <p>We envision a world where access to healthcare information is not just a luxury but a fundamental right.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Who We Are</h3>
+                <p>We are a passionate team of data scientists and technology enthusiasts, dedicated to making healthcare accessible and personalized for you.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Our Mission</h3>
+                <p>Our mission is to provide a seamless platform leveraging machine learning to help you make informed health decisions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>How We Do It</h3>
+                <p>Our platform uses a machine learning model trained on a vast dataset of symptoms and diseases to generate accurate predictions about potential illnesses.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Your Well-being, Our Priority</h3>
+                <p>Your health is our top priority. We offer detailed information about each disease to support your journey to better health.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Join Us on this Journey</h3>
+                <p>We invite you to explore our platform and take control of your health journey with knowledge and support.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

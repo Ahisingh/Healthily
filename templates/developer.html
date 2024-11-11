@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      body {
+            color: #333;
+            color: white;
+        }
+
+        /* Overlay to make background less distracting */
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Transparent card style with shadow */
+        .developer-card {
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+            border: none;
+            color: white;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .developer-card:hover {
+            transform: translateY(-10px); /* Move up slightly */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Developer Profile Image */
+        .developer-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Developer Social Media Icons */
+        .developer-social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            transition: transform 0.3s;
+        }
+
+        .developer-social-icons img:hover {
+            transform: scale(1.2); /* Slight zoom on hover */
+        }
+
+        /* Page title */
+        .page-title {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        /* Responsive card columns */
+        @media (max-width: 768px) {
+            .developer-card {
+                margin-top: 15px;
+            }
+        }
+    </style>
+  </head>
+  <body style="background-image: url('/static/background.jpg'); background-size: cover;"></body>
+      <!-- Developer Team Section -->
+      <h2 class="text-center my-5">Meet Our Developers</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
+        <!-- Developer 1 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='abhishek.jpg') }}" class="card-img-top" alt="Developer 1">
+            <div class="card-body">
+              <h5 class="card-title">Abhishek Kumar</h5>
+              <p class="card-text">Abhishek is a Computer Science Engineer with a passion for Data Science and a strong background in Machine Learning and its algorithms. He loves solving complex problems and enjoys collaborating with teams.</p>
+              <div class="d-flex align-items-center developer-social-icons">
+                <a href="https://github.com/Ahisingh" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/abhishek-kumar-860798245" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer 2 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='anindya.jpg') }}" class="card-img-top" alt="Developer 2">
+            <div class="card-body">
+              <h5 class="card-title">Anindya Bag</h5>
+              <p class="card-text">Anindya specializes in Frontend development with a deep understanding of Graphic Design and UI/UX design. He loves creating visually appealing and user-friendly interfaces.</p>
+              <div class="developer-social-icons">
+                <a href="https://github.com/code-anindya-X" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/anindya-bag" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer 3 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='ashutosh.jpg') }}" class="card-img-top" alt="Developer 3">
+            <div class="card-body">
+              <h5 class="card-title">Ashutosh Rai</h5>
+              <p class="card-text">Ashutosh is a Web Developer with expertise in MERN stack. He loves showcasing new ideas through his websites.</p>
+              <div class="developer-social-icons">
+                <a href="https://github.com/Ashutoshrai10630" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/ashutoshrai10630" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer 4 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='shukla.jpg') }}" class="card-img-top" alt="Developer 4">
+            <div class="card-body">
+              <h5 class="card-title">Nilay Shukla</h5>
+              <p class="card-text">Nilay is a Computer Science Engineer with passionate problem solver.He has good understanding of Machine Learning , GenAI and Backend.</p>
+              <div class="developer-social-icons">
+                <a href="https://github.com/Nilay66" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/nilay-shukla-794a9823b" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer 5 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='shirsha.jpg') }}" class="card-img-top" alt="Developer 5">
+            <div class="card-body">
+              <h5 class="card-title">Shirsha Chakraborty</h5>
+              <p class="card-text">Shirsha is a Computer engineer who is passionate about GenAI and IoT. He specializes in automation and Generative AI.</p>
+              <div class="developer-social-icons">
+                <a href="https://github.com/ShirshaChakraborty" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/shirshachakraborty2003" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Developer 6 -->
+        <div class="col">
+          <div class="card developer-card h-100">
+            <img src="{{ url_for('static', filename='harsh.jpg') }}" class="card-img-top" alt="Developer 5">
+            <div class="card-body">
+              <h5 class="card-title">Harsh Singh</h5>
+              <p class="card-text">Harsh is a Computer engineer who is passionate about UI/UX design and Frontend. He specializes in Figma and React.</p>
+              <div class="developer-social-icons">
+                <a href="https://github.com/harshhxrajputt" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/harsh-singh" target="_blank"><img src="{{ url_for('static', filename='linkedin.jpeg') }}" alt="LinkedIn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
