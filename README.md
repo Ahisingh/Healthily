@@ -18,5 +18,5 @@ Take charge of your health with our Personalized Medical Recommendation System. 
 # Steps to run the project:-
 
 1. Install all the requirements from Requirements.txt file
-2. Create .vnv environment for the project
+2. Create .venv environment for the project
 3. Go to the root directory of main.py file in terminal and type "flask --app main.py run"
